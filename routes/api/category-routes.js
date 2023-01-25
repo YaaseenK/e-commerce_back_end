@@ -12,7 +12,7 @@ router.get('/', async (req, res) => {
       include: { 
         model: Product,
         attributes: [`id`, `product_name`, `price`, `stock`, `category_id`],
-      },
+      }
     });
     return res.status(200).json(categoryData);
   }
@@ -21,8 +21,20 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.get('/:id', (req, res) => {
+
+router.get('/:id', async (req, res) => {
   // find one category by its `id` value
+  try {
+    const categoryData = await Category.findByPk(req.params.id, {
+      include: { 
+        model: Product,
+        attributes: [`id`, `product_name`, `price`, `stock`, `category_id`],
+      }
+    });
+    return res.status(200).json(categoryData);
+  }catch(err){
+    res.status(500).json(err);
+  }
   // be sure to include its associated Products
 });
 
