@@ -1,3 +1,4 @@
+// importing the .env
 require('dotenv').config();
 
 const Sequelize = require('sequelize');

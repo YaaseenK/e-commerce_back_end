@@ -9,10 +9,16 @@ router.get('/', async (req, res) => {
   // be sure to include its associated Category and Tag data
   try {
     const productData = await Product.findAll({
-      include: {
-        model: Category,
-        attributes: ['id', 'category_name']
-      }
+      include: [
+        {
+          model: Category,
+          attributes: ['category_name'],
+        },
+        {
+          model: Tag,
+          attributes: ['tag_name'],
+        },
+      ],
     });
     res.status(200).json(productData)
   }
@@ -27,10 +33,16 @@ router.get('/:id', async(req, res) => {
   // be sure to include its associated Category and Tag data
   try {
     const productData = await Product.findByPk(req.params.id, {
-      include: {
-        model: Category,
-        attributes: ['id', 'category_name']
-      }
+      include: [
+        {
+          model: Category,
+          attributes: ['category_name'],
+        },
+        {
+          model: Tag,
+          attributes: ['tag_name'],
+        },
+      ],
     });
     res.status(200).json(productData)
   }
@@ -128,7 +140,7 @@ router.delete('/:id', async (req, res) => {
         id: req.params.id
       },
     })
-      res.status(200).json(categoryData);
+      res.status(200).json(productData);
     }catch(err) {
       res.status(400).json(err);
   }

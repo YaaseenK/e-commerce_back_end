@@ -11,7 +11,7 @@ router.get('/', async (req, res) => {
       // be sure to include its associated Products
       include: { 
         model: Product,
-        attributes: [`id`, `product_name`, `price`, `stock`, `category_id`],
+        attributes: [`id`, `product_name`, `price`, `stock`, 'category_id'],
       }
     });
     return res.status(200).json(categoryData);
@@ -72,7 +72,7 @@ router.delete('/:id', async (req, res) => {
         id: req.params.id
       },
     })
-    res.status(200).json(categoryData);
+    res.status(200).json('A category has been removed from the database ', categoryData);
   }catch(err) {
     res.status(400).json(err);
   }
