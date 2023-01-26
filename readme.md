@@ -39,8 +39,8 @@
    YaaseenK
 
 ## Contact Info:
-   #Github: https://github.com/YaaseenK
-   #Email: yaaseenkhan02@gmail.com
+   # Github: https://github.com/YaaseenK
+   # Email: yaaseenkhan02@gmail.com
 
   ## Tests
   
