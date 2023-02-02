@@ -30,8 +30,8 @@
    or
    * npm install
 
-  ## Usage:
-   * 
+  ## Usage: watch my yt video about this application!
+   * https://www.youtube.com/watch?v=BUGQovBrqC8&t=842s
    * Run the following commands in your terminal to test this app:
    * npm start
    
