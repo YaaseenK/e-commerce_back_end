@@ -72,7 +72,7 @@ router.delete('/:id', async (req, res) => {
         id: req.params.id
       },
     })
-    res.status(200).json('A category has been removed from the database ', categoryData);
+    res.status(200).json({ message: 'A category has been removed from the database ' , categoryData});
   }catch(err) {
     res.status(400).json(err);
   }
