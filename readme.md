@@ -1,4 +1,4 @@
-# 12 SQL: Employee Tracker
+# 13 Object-Relational Mapping (ORM): E-Commerce Back End
 
   ## License:
    Apache 2.0   ![GitHub license](https://img.shields.io/badge/License-Apache%202.0-blue.svg)
@@ -30,8 +30,8 @@
    or
    * npm install
 
-  ## Usage:
-   * 
+  ## Usage: watch my yt video about this application!
+   * https://www.youtube.com/watch?v=BUGQovBrqC8&t=842s
    * Run the following commands in your terminal to test this app:
    * npm start
    
